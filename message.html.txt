@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Anniversary ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  overflow: hidden;
+}
+
+.note {
+  background: white;
+  padding: 45px;
+  border-radius: 25px;
+  max-width: 650px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+h2 {
+  color: #ff4d6d;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2b2b2a6df7.mp3" type="audio/mpeg">
+</audio>
+
+<div class="note">
+  <h2>Happy Anniversary Baby ❤️</h2>
+  <p>
+    Hey Saloni,<br><br>
+    You’ve been my strength and my biggest support.<br>
+    Thank you for making my life beautiful.<br><br>
+    I’m sorry for missing out on moments that mattered.<br><br>
+    I love you endlessly.<br><br>
+    I can’t wait to marry you and have Aalu Pav.<br>
+    I love you baby ❤️
+  </p>
+</div>
+
+<script>
+for (let i = 0; i < 120; i++) {
+  const c = document.createElement("div");
+  c.className = "confetti";
+  c.style.left = Math.random() * 100 + "vw";
+  c.style.backgroundColor =
+    `hsl(${Math.random()*360},100%,50%)`;
+  document.body.appendChild(c);
+  setTimeout(() => c.remove(), 4000);
+}
+</script>
+
+</body>
+</html>
